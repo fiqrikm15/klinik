@@ -24,10 +24,5 @@ namespace Pendaftaran
         {
             InitializeComponent();
         }
-
-        private void DragWindow(object sender, MouseButtonEventArgs e)
-        {
-            this.DragMove();
-        }
     }
 }

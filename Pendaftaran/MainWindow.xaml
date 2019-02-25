@@ -11,8 +11,8 @@
         </Grid.RowDefinitions>
 
         <!-- Definition for control window -->
-        <Grid Grid.Row="0" VerticalAlignment="Center" MouseDown="DragWindow">
-            <StackPanel VerticalAlignment="Top" MouseDown="DragWindow">
+        <Grid Grid.Row="0" VerticalAlignment="Center">
+            <StackPanel VerticalAlignment="Top">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="3*"></ColumnDefinition>
@@ -27,29 +27,38 @@
                            Foreground="#222227"
                            Margin="15 0"/>
                     </StackPanel>
-                    
+
                     <StackPanel Grid.Column="1" Width="537">
                         <DockPanel Width="Auto" HorizontalAlignment="Right">
-                            <Button Width="35" 
+                            <Button Width="20"
+                                    Height="20"
                                     Margin="5 0" 
                                     BorderBrush="{x:Null}" 
                                     Background="{x:Null}" 
                                     Foreground="#222227"
-                                    x:Name="BtnMiniMize">A</Button>
-                            
-                            <Button Width="35" 
+                                    x:Name="BtnMinimize">
+                                <Image Source="Assets/2.png"/>
+                            </Button>
+
+                            <Button Width="20" 
+                                    Height="20"
                                     Margin="5 0" 
                                     BorderBrush="{x:Null}" 
                                     Background="{x:Null}" 
                                     Foreground="#222227"
-                                    x:Name="BtnMaximize">B</Button>
-                            
-                            <Button Width="35" 
+                                    x:Name="BtnMaximize">
+                                <Image Source="Assets/3.png"/>
+                            </Button>
+
+                            <Button Width="20" 
+                                    Height="20"
                                     Margin="5 0" 
                                     BorderBrush="{x:Null}" 
                                     Background="{x:Null}" 
                                     Foreground="#222227"
-                                    x:Name="BtnCose">C</Button>
+                                    x:Name="BtnClose">
+                                <Image Source="Assets/1.png"/>
+                            </Button>
                         </DockPanel>
                     </StackPanel>
                 </Grid>
@@ -63,9 +72,16 @@
                 <ColumnDefinition Width="4*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-            <StackPanel Grid.Column="0" Background="WhiteSmoke" Height="474" VerticalAlignment="Bottom"/>
+            <StackPanel Grid.Column="0" Background="WhiteSmoke">
+                <Button Margin="5">Daftar Pasien Baru</Button>
+                <Button Margin="5">Daftar Ulang Pasien</Button>
+                <Button Margin="5">Daftar Berobat</Button>
+                <Button Margin="5">Daftar Antrian Pasien</Button>
+            </StackPanel>
 
-            <StackPanel Grid.Column="1" Background="SkyBlue"/>
+            <StackPanel Grid.Column="1" Background="SkyBlue">
+                <Frame x:Name="MainFrame"/>
+            </StackPanel>
         </Grid>
     </Grid>
 </Window>
